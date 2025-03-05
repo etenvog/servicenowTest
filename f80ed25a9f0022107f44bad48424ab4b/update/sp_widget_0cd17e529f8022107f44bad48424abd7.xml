@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $rootScope) {
+  /* widget controller */
+  var c = this;
+
+	$scope.loadingIndicator = $rootScope.loadingIndicator;
+
+	$scope.$on('sp_loading_indicator', function(e, value) {
+		$scope.loadingIndicator = value;
+	});
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.header-loader {&#13;
+	float: left;&#13;
+  	width: 24px;&#13;
+  	position: relative;&#13;
+  	top: 24px;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>test</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>test</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-05 09:33:12</sys_created_on>
+        <sys_id>0cd17e529f8022107f44bad48424abd7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>test</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_req">f80ed25a9f0022107f44bad48424ab4b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">f80ed25a9f0022107f44bad48424ab4b</sys_scope>
+        <sys_update_name>sp_widget_0cd17e529f8022107f44bad48424abd7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-05 09:33:12</sys_updated_on>
+        <template><![CDATA[<ul class="nav navbar-nav">
+  <div class="header-loader" ng-show="loadingIndicator">
+    <span class="sr-only">${Loading}</span>
+    <div class="hidden-xs sp-loading-indicator la-sm">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</ul>
+]]></template>
+    </sp_widget>
+</record_update>
